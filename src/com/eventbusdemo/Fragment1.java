@@ -25,4 +25,10 @@ public class Fragment1 extends Fragment{
 	public void onEvent(String str){
 		text.setText(str);
 	}
+	
+	@Override
+	 protected void onDestroy() {
+	    super.onDestroy();
+	    EventBus.getDefault().unregister(this);
+	  }
 }
