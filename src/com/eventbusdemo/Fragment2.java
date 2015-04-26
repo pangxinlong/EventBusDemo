@@ -27,4 +27,10 @@ public class Fragment2 extends Fragment{
 		text.setText(str);
 	}
 	
+	@Override
+	 protected void onDestroy() {
+	    super.onDestroy();
+	    EventBus.getDefault().unregister(this);
+	 }
+	
 }
